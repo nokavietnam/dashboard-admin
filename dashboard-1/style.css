@@ -186,3 +186,43 @@ body {
   height: 100%;
   object-fit: cover;
 }
+/* Responsive */
+@media (max-width: 991px) {
+  .navigation {
+    left: -300px;
+  }
+  .navigation.active {
+    width: 300px;
+    left: 0;
+  }
+  .main {
+    width: 100%;
+    left: 0;
+  }
+  .main.active {
+    left: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .user {
+    min-width: 40px;
+  }
+  .navigation {
+    width: 100%;
+    left: -100%;
+    z-index: 1000;
+  }
+  .navigation.active {
+    width: 100%;
+    left: 0;
+  }
+  .main.active .toggle {
+    z-index: 10000;
+  }
+  .main.active .toggle {
+    z-index: 1001;
+    position: unset;
+    color: var(--white);
+  }
+}
